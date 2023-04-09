@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="B-TOWN FIREARMS.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>
+        contact
+    </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        } 
+        main,section{
+text-align: center;
+        }
+
+        body.dark-theme {
+            background-image: linear-gradient(to right, grey, black);
+            filter: invert(100%);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+
+        }
+
+        span {
+            font-size: 30px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .toggle input[type='checkbox'] {
+            display: none;
+        }
+
+        .toggle label {
+            background-color: #777;
+            border: 2px solid #555;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: all ease-in-out 0.3s;
+            width: 105px;
+            height: 50px;
+        }
+
+        .toggle label::after {
+            background-color: #555;
+            border-radius: 50%;
+            content: ' ';
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            left: 4px;
+            top: 2px;
+            transition: all ease-in-out 0.3s;
+            width: 42px;
+            height: 42px;
+        }
+
+        .toggle input[type='checkbox']:checked~label {
+            background-color: grey;
+            border-color: whitesmoke;
+        }
+
+        .toggle input[type='checkbox']:checked~label::after {
+            background-color: white;
+            transform: translateX(50px);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+       
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: "Lato", sans-serif;
+            background-color: white;
+            background-image: linear-gradient(to right, white, grey);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <span onclick="openNav()">&#9776; Menu</span>
+        <div class="toggle">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle"></label>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="finalcss.html">Home</a>
+        <a href="pistols.html">Pistols</a>
+        <a href="Rifels.html">Rifels</a>
+        <a href="purchase.html">Cart</a>
+        <a href="#">Contact</a>
+    </div>
+    <div data-aos="zoom-in-down">
+        <h1>Contact Us</h1>
+    </div>
+    <main>
+        <p>Thank you for your interest in Btwonfirearms. Please use the form below to get in touch with us.</p>
+        <form action="/submit-contact-form" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+    
+          <button type="submit">Send</button>
+        </form>
+      </main>
+    <section id="contact">
+        To contact Us</br>
+        Visit our office</br>
+        21 Hashmi place</br>
+        Brampton,ON</br>
+        L6Y 6K1</br>
+        For more deatils contact us on (647)-671-2648 or leave a msg on</br>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Btownfirearms88377@gmail.com" target="_blank">Btownfirearms88377@gmail.com</a> 
+    </section>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
+
+        toggle.addEventListener('input', e => {
+            const isChecked = e.target.checked;
+        
+
+            if (isChecked) {
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+            }
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" type="image/x-icon" href="B-TOWN FIREARMS.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<title>
+  B-town Firearms
+</title>
+
+<body>
+  <div id="main">
+    <span onclick="openNav()">&#9776; Menu</span>
+    </div>
+    <div class="toggle">
+      <input type="checkbox" id="toggle" />
+      <label for="toggle"></label>
+    </div>
+ 
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="finalcss.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="purchase.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+
+  <div class="logo">
+    <center>
+      <h1 class="head">B-Town Firearms</h1>
+      <img src="B-TOWN FIREARMS.png" alt="logo" class="mainlogo" width="800" height="700">
+    </center>
+  </div>
+  <div class="body">
+    <h3>
+      <center>
+      At B-town firearms, we believe in providing the highest quality firearms and accessories</br>
+      to our customers. Come see why we're the go-to shop for gun enthusiasts in the area.</br>
+      Looking for a reliable firearm for hunting or self-defense? Look no further than</br>
+      B-town firearms. Our knowledgeable staff will help you find the perfect fit for your needs.</br>
+      When it comes to firearms, safety is our top priority at B-town firearms. We offer a wide</br>
+      selection of high-quality guns and accessories to ensure our customers are always prepared.</br>
+      At B-town firearms, we're passionate about providing our customers with the best possible</br>
+      service and selection. Whether you're a seasoned pro or a beginner, we have everything</br>
+      you need to succeed.With a focus on quality and customer satisfaction, B-town firearms</br>
+      is your one-stop shop for all your gun needs. From pistols to rifles and everything in</br>
+      between, we have it all.
+    </center>
+    </h3>
+  </div>
+  <div data-aos="fade-up"
+  data-aos-duration="1500">
+    <center>
+      <button role="button" onclick="window.location.href='pistols.html'">Pistols</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button role="button" onclick="window.location.href='Rifels.html'">Rifels</button>
+    </center>
+  </div>
+
+  <footer class="foot">
+    <p>
+      Desingners:</br>
+      Karanbir Singh</br>
+      Jashanpeet Singh</br>
+      Karan Bhatia</br>
+    </p>
+  </footer>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+  <script>
+    const toggle = document.getElementById('toggle');
+    const body = document.body;
+
+    toggle.addEventListener('input', e => {
+      const thisChecked = e.target.checked
+      const dark = localStorage.getItem("darkmode");
+      localStorage.setItem('darkmode',this.checked);
+
+      if (thisChecked) {
+        body.classList.add('dark-theme');
+      } else {
+        body.classList.remove('dark-theme');
+      }
+    });
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

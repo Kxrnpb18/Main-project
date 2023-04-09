@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="B-TOWN FIREARMS.png">
+  <title>
+    Pistols
+  </title>
+
+</head>
+
+<body>
+  <div id="main">
+    <span onclick="openNav()">&#9776; Menu</span>
+    <div class="toggle">
+      <input type="checkbox" id="toggle" />
+      <label for="toggle"></label>
+    </div>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="finalcss.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="Rifels.html">Rifels</a>
+    <a href="purchase.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="main">
+    <center>
+      <h1>B-Town Firearms</h1>
+      <h3>Pistol Collection</h3>
+    </center>
+  </div>
+  <div class=" menu">
+    <div class="gallery">
+
+      <img src="4441.jpg" alt="Cinque Terre" width="500px">
+      </a>
+      <div class="desc">
+        <button type="button" onclick="window.location.href='purchase.html'">Buy</button>
+      </div>
+
+      <div class="gallery1">
+
+        <img src="pistol.jpg" class="second" alt="Forest">
+        </a>
+        <div class="desc">
+          <button type="button" onclick="window.location.href='purchase.html'">Buy</button>
+        </div>
+
+        <div class="gallery2">
+          <img src="123.jpg" alt="Northern Lights" width="400px">
+          </a>
+          <div class="desc">
+            <button type="button" onclick="window.location.href='purchase.html'">Buy</button>
+          </div>
+          <div class="gallery3">
+
+            <img src="WhatsApp Image 2023-03-23 at 16.57.16.jpg" alt="Mountains">
+            </a>
+            <div class="desc">
+              <button type="button" onclick="window.location.href='purchase.html'">Buy</button>
+            </div>
+            <div class="gallery4">
+
+              <img src="9mm-Beretta-Handguns-1.webp" alt="Mountains" width="400px">
+              </a>
+              <div class="desc">
+                <button type="button" onclick="window.location.href='purchase.html'">Buy</button>
+              </div>
+              <div class="gallery5">
+
+                <img src="W123.jpg" alt="Mountains" width="400px">
+                </a>
+                <div class="desc">
+                  <button type="button" onclick="window.location.href='purchase.html'">Buy</button>
+                </div>
+              </div>
+              <script>
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "250px";
+                  document.getElementById("main").style.marginLeft = "250px";
+                }
+
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                  document.getElementById("main").style.marginLeft = "0";
+                }
+              </script>
+              <script>
+                const toggle = document.getElementById('toggle');
+                const body = document.body;
+
+                toggle.addEventListener('input', e => {
+                  const isChecked = e.target.checked;
+
+                  if (isChecked) {
+                    body.classList.add('dark-theme');
+                  } else {
+                    body.classList.remove('dark-theme');
+                  }
+                });
+              </script>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="B-TOWN FIREARMS.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>
+        about B-town Firearms
+    </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body.dark-theme {
+            background-color: black;
+            background-image: linear-gradient(to right, grey, black);
+            color: #E5E7EB
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+
+        }
+
+        span {
+            font-size: 30px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .toggle input[type='checkbox'] {
+            display: none;
+        }
+
+        .toggle label {
+            background-color: #777;
+            border: 2px solid #555;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: all ease-in-out 0.3s;
+            width: 105px;
+            height: 50px;
+        }
+
+        .toggle label::after {
+            background-color: #555;
+            border-radius: 50%;
+            content: ' ';
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            left: 4px;
+            top: 2px;
+            transition: all ease-in-out 0.3s;
+            width: 42px;
+            height: 42px;
+        }
+
+        .toggle input[type='checkbox']:checked~label {
+            background-color: grey;
+            border-color: whitesmoke;
+        }
+
+        .toggle input[type='checkbox']:checked~label::after {
+            background-color: white;
+            transform: translateX(50px);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .text {
+            text-align: center;
+            font-size: large;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: "Lato", sans-serif;
+            background-color: white;
+            background-image: linear-gradient(to right, white, grey);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <span onclick="openNav()">&#9776; Menu</span>
+        <div class="toggle">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle"></label>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="finalcss.html">Home</a>
+        <a href="pistols.html">Pistols</a>
+        <a href="Rifels.html">Rifels</a>
+        <a href="purchase.html">Cart</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div data-aos="zoom-in-down">
+        <h1>
+            B-Town Firearms
+        </h1>
+    </div>
+    <div class="text">
+        <h3>
+            As a firearm business, we are committed to providing our customers</br>
+            with high-quality firearms and exceptional service.</br>
+            Our team of experienced professionals is dedicated to ensuring that each</br>
+            customer finds the perfect firearm to meet their needs and preferences.</br>
+
+            We offer a wide selection of firearms, including handguns, shotguns, rifles, and more.</br>
+            Our inventory includes both new and used firearms, as well as accessories such as</br>
+            ammunition, holsters, and scopes. We work with some of the top manufacturers in the</br>
+            industry to bring our customers the best possible products.</br>
+
+            In addition to our sales, we also offer a variety of services to our customers.</br>
+            Our team is available to help with gunsmithing, repairs, and modifications. We</br>
+            can also assist with firearm transfers and offer training courses to help our</br>
+            customers become more comfortable and confident with their firearms.</br>
+
+            At our firearm business, we prioritize safety and responsibility above all else.</br>
+            We follow all state and federal regulations regarding firearm sales and transfers,</br>
+            and we take great care to ensure that each customer understands the importance</br>
+            of safe handling and storage of their firearm.</br>
+
+            Whether you're a seasoned gun owner or new to the world of firearms, we are here to help.</br>
+            Our team is passionate about what we do, and we are dedicated to providing our customers</br>
+            with the best possible experience. Visit us today to see our inventory and learn more</br>
+            about our services.
+        </h3>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
+
+        toggle.addEventListener('input', e => {
+            const isChecked = e.target.checked;
+        
+
+            if (isChecked) {
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+            }
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
